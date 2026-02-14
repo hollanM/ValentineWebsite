@@ -1,3 +1,4 @@
+/* Sis's css */
 body {
     background: #ffd6e8;
     font-family: "Poppins", sans-serif;
@@ -104,6 +105,7 @@ button {
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 9998;
 }
 
 .modal-content {
@@ -134,3 +136,162 @@ button {
     transform: scale(1.2);
     color: #d4024f;
 }
+
+
+
+
+
+
+
+
+
+/* Friend's css */
+.cardF {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.bodyF {
+    background-image: url("topgunBackground.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.lockon-area {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#reticle {
+    
+    position: absolute;
+    font-size: 40px;
+    cursor: crosshair;
+    transition: transform 0.2s ease;
+    -webkit-user-select: none; /*safari*/
+    user-select: none;        
+    z-index: 10;
+}
+
+.locked-on {
+    animation: lockonPulse 0.6s ease-out forwards;
+}
+
+@keyframes lockonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(0.8); }
+}
+
+.framed {
+    border: 4px solid black;
+    border-radius: 12px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+
+#approvalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.approval-gif {
+    width: 60%;
+    max-width: 500px;
+    border: 4px solid black;
+    border-radius: 12px;
+    padding: 6px;
+    background: rgba(0,0,0,0.4);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.friendModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(255, 139, 197, 0.95), rgba(255, 0, 111, 0.95) );
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+}
+
+.friendModal .modal-content {
+    background: rgba(255, 105, 180, 0.9); /* Hot pink Cars vibe */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: center;
+    z-index: 9999;
+}
+
+.friendModal img {
+    width: 520px;
+    max-width: 90vw;
+    border-radius: 10px;
+}
+
+.floatF {
+    position: fixed;
+    bottom: -20px;
+    font-size: 28px;
+    animation: floatUpF 4s linear infinite;
+    pointer-events: none;
+    opacity: 0.85;
+    z-index: 9999;
+}
+.bigGreeting {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 6px black;
+}
+
+@keyframes floatUpF {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-120vh) scale(0.7); opacity: 0; }
+}
+
+.modalMessage {
+    animation: fadeIn 0.8s ease forwards; 
+    opacity: 0; 
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 15px;
+    color: white;
+    text-shadow: 0 0 6px black;
+}
+
